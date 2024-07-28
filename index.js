@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const name = form.querySelector('input[type="text"]').value;
     const email = emailInput.value;
+    const referralLink = localStorage.getItem("referral_link");
     function validateEmail(email) {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         return true;
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       first_name: name,
       email: email,
       waitlist_id: 19060,
+      referral_link: referralLink,
     };
     fetch("https://api.getwaitlist.com/api/v1/signup", {
       method: "POST",
