@@ -1628,3 +1628,78 @@ main :last-child,
 .accordion:target .title a:focus-visible {
   background-color: hsl(183, 100%, 93%);
 }
+
+.scroller {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.scroller__inner {
+  display: inline-flex;
+  animation: scroll var(--_animation-duration, 30s) linear infinite;
+}
+
+.scroller__inner img {
+  margin-right: 30px;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-direction="right"] .scroller__inner {
+  animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] .scroller__inner {
+  animation-direction: normal;
+}
+
+.scroller[data-speed="fast"] .scroller__inner {
+  --_animation-duration: 15s;
+}
+
+.scroller[data-speed="slow"] .scroller__inner {
+  --_animation-duration: 45s;
+}
+
+.company-design-area {
+  padding: 100px 0px;
+}
+
+.company-design-area h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+/* 
+
+.company-design-area{
+  position: relative;
+  background: #0f0c29; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #0f0c29, #24243e, #302b63, #24243e, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #0f0c29, #24243e, #302b63, #24243e, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background-size: 300% 300%; */
+  /* animation: gradient 15s ease infinite; */
+
+/* } */
