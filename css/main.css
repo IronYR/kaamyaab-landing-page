@@ -1525,21 +1525,29 @@ main :last-child,
   background-color: hsl(183, 100%, 93%);
 }
 
+
+
+
+
+
+
+
+
+
 .scroller {
   overflow: hidden;
   position: relative;
   white-space: nowrap;
-  
 }
 
 .scroller__inner {
   display: inline-flex;
   animation: scroll var(--_animation-duration, 30s) linear infinite;
-  padding: 2rem;
 }
 
 .scroller__inner img {
   margin-right: 30px;
+  filter: blur(7px); /* Adds a blur effect to the images */
 }
 
 .scroller[data-animated="true"] {
@@ -1601,7 +1609,19 @@ main :last-child,
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
