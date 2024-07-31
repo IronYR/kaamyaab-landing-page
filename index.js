@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = {
       first_name: name,
       email: email,
-      waitlist_id: 19060,
+      waitlist_id: 19151,
       referral_link: referralLink,
     };
     fetch("https://api.getwaitlist.com/api/v1/signup", {
