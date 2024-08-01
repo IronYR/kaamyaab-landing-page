@@ -26,11 +26,36 @@
 
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .banner {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 7px;
+      position: relative;
+      width: 100%;
+      display: block;
+    }
 
+/* Hide the banner on subsequent page loads */
+.hidden {
+    display: none;
+}
+
+/* Main content styles */
+.content {
+    padding: 20px;
+}
+  </style>
 </head>
 
 <body>
   <!-- Navbar -->
+  <div class="banner" id="banner">
+    <p>Employer? <u><b>Contact us</b></u>
+      today to explore how Kaamyaab can help you find the best candidates.
+    </p>
+  </div>
   <nav class="navtop">
     <div class="navtop__wrapper">
       <div class="navtop__brand">
