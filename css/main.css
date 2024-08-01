@@ -589,23 +589,28 @@ input:valid ~ label {
     font-size: 1.2em;
   }
   .intro__button {
-    padding: 0.6em 1.5em;
+    padding: 0.8em 1.7em;
     font-size: 14px;
   }
+  
 }
 
 @media only screen and (max-width: 480px) {
   .intro__title {
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 4rem;
   }
   .intro__paragraph {
-    font-size: 1em;
+    font-size: 1.25em;
   }
-  .intro__button {
-    padding: 0.5em 1.2em;
-    font-size: 12px;
+  
+  .intro{
+    justify-content: start;
   }
+  .intro__container{
+    padding-top: 2rem;
+  }
+  
 }
 
 @media only screen and (max-width: 420px) {
@@ -614,6 +619,7 @@ input:valid ~ label {
     padding: 0 1.4em;
     font-size: 1em;
   }
+  
 }
 /**FEAUTURES***********************************/
 
@@ -1543,6 +1549,7 @@ main :last-child,
 .scroller__inner {
   display: inline-flex;
   animation: scroll var(--_animation-duration, 30s) linear infinite;
+  padding: 1rem 0;
 }
 
 .scroller__inner img {
