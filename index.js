@@ -9,7 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   emailInput.addEventListener("input", () => {
     const email = emailInput.value;
-    if (email.includes(".edu")) {
+    function validateEmail(email) {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        return true;
+      }
+      return false;
+    }
+    if (validateEmail(email)) {
       joinButton.style.pointerEvents = "auto";
       joinButton.style.opacity = "1";
     } else {
@@ -31,8 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
     // Validate input
-    if (!name || !email || !email.includes(".edu") || !validateEmail(email)) {
-      alert("Please enter a valid name and .edu email.");
+    if (
+      !name ||
+      !email ||
+      //  || !email.includes(".edu")
+      !validateEmail(email)
+    ) {
+      alert("Please enter a valid name and email.");
       return;
     }
 
